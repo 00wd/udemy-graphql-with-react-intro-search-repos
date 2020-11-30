@@ -21,6 +21,7 @@ const StarButton = (props) => {
                 query: SEARCH_REPOSITORIES,
                 variables: { query, first, last, before, after },
               });
+              
               const edges = data.search.edges;
               const newEdges = edges.map((edge) => {
                 if (edge.node.id === node.id) {
